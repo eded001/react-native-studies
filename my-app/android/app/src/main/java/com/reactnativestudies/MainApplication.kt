@@ -1,4 +1,4 @@
-package com.the_heapsters.project
+package com.reactnativestudies
 
 import android.app.Application
 import android.content.res.Configuration

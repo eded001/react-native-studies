@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 export default function App() {
-  const [data, setData] = useState([]);
+  const [contador, setContador] = useState(0);
 
   return (
     <View style={styles.container}>
-      <FlatList
-        data={data}
-        keyExtractor={item => item.key}
-        ListHeaderComponent={() => <Header />}
-        ListEmptyComponent={() => <></>}
-      >
-      </FlatList>
-      <StatusBar style="light" />
+      <Text style={styles.text}>Contador: {contador}</Text>
+      <Button title="Aumentar" onPress={() => setContador(contador + 1)} />
     </View>
   );
 }
@@ -22,8 +15,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#121212',
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 60,
+  },
+  text: {
+    fontSize: 24,
+    marginBottom: 10,
   },
 });

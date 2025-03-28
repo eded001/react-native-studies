@@ -1,4 +1,4 @@
-package com.the_heapsters.project
+package com.reactnativestudies
 
 import android.os.Build
 import android.os.Bundle
