@@ -1,11 +1,12 @@
 import React from "react";
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import styles from '../assets/styles/styles';
 
-export default function ScrollViewScreen({ navigation }) {
+export default function ScrollViewExample({ navigation }) {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <ScrollView>
                 <View style={{ paddingHorizontal: 20 }}>
                     <Text style={{ fontSize: 25 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae lectus et sapien posuere porta in vitae purus. Fusce blandit ullamcorper ante sed molestie. Cras vel tempus nisi. Integer id vulputate felis. Nunc mollis nulla eros, eget sollicitudin turpis dictum id. Sed condimentum nunc diam, ut fringilla lorem blandit quis. Aenean blandit vulputate quam vitae consequat. Donec libero lorem, varius vel laoreet sed, sagittis at purus. Phasellus sollicitudin, est eget ornare faucibus, est mi condimentum justo, at vulputate nisl nisi a tortor. Curabitur diam ante, scelerisque eget quam ac, egestas efficitur massa. Cras consectetur ex eget erat pellentesque, eget porta enim aliquet.</Text>
@@ -20,6 +21,6 @@ export default function ScrollViewScreen({ navigation }) {
             >
                 <Text style={styles.buttonText}>Voltar</Text>
             </TouchableOpacity>
-        </View>
+        </SafeAreaView>
     )
 }

@@ -3,8 +3,7 @@ import { View, Text, Image, TouchableOpacity, Dimensions } from "react-native";
 
 import styles from '../assets/styles/styles';
 
-export default function ImageScreen({ navigation }) {
-    // Obtendo as dimensões da tela
+export default function ImageExample({ navigation }) {
     const { width, height } = Dimensions.get("window");
 
     return (

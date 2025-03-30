@@ -3,12 +3,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 // Telas
-import HomeScreen from './src/screens/HomeScreen';
-import HelloWorldScreen from './src/screens/HelloWorldScreen';
-import HooksScreen from './src/screens/HooksScreen';
-import InputOutputScreen from './src/screens/InputOutputScreen';
-import ImagesScreen from './src/screens/ImageScreen';
-import ScrollViewScreen from './src/screens/ScrollViewScreen';
+import HomeScreen from './src/screens/Home';
+import HelloWorldScreen from './src/screens/HelloWorld';
+import HooksScreen from './src/screens/Hooks';
+import InputOutputScreen from './src/screens/InputOutput';
+import ImagesScreen from './src/screens/Image';
+import ScrollViewScreen from './src/screens/ScrollView';
+import SafeAreaPreviewScreen from './src/screens/SafeAreaPreview';
+import ExampleWithSafeAreaScreen from './src/screens/ExampleWithSafeArea';
+import ExampleWithoutSafeAreaScreen from './src/screens/ExampleWithoutSafeArea';
+import FlatListScreen from './src/screens/FlatList';
+import Modal from './src/screens/Modal';
 
 const Stack = createStackNavigator();
 
@@ -17,8 +22,12 @@ export default function App() {
     <NavigationContainer>
       {/* O Stack.Navigator define a pilha de telas */}
 
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{ headerShown: false }}
+      >
         {/* initialRouteName -> Define a rota inicial baseada no componente que contém esse pseudo-ID */}
+        {/* screenOptions -> Define configurações de renderização de tela como os headers (cabeçalhos) */}
 
         <Stack.Screen name="Home" component={HomeScreen} />
         {/* Stack.Screen -> define e "exibe" (deixa "acessível") as rotas (telas) */}
@@ -44,6 +53,26 @@ export default function App() {
         <Stack.Screen
           name="ScrollView"
           component={ScrollViewScreen} />
+
+        <Stack.Screen
+          name="SafeAreaPreview"
+          component={SafeAreaPreviewScreen} />
+
+        <Stack.Screen
+          name="ExampleWithSafeArea"
+          component={ExampleWithSafeAreaScreen} />
+
+        <Stack.Screen
+          name="ExampleWithoutSafeArea"
+          component={ExampleWithoutSafeAreaScreen} />
+
+        <Stack.Screen
+          name="FlatList"
+          component={FlatListScreen} />
+
+        <Stack.Screen
+          name="Modal"
+          component={Modal} />
       </Stack.Navigator>
     </NavigationContainer>
   );

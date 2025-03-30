@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 
 import styles from '../assets/styles/styles';
 
-export default function HooksScreen({ navigation }) {
+export default function Hooks({ navigation }) {
     const [counter, setCounter] = useState(0);
 
     return (
@@ -11,14 +11,20 @@ export default function HooksScreen({ navigation }) {
             <View>
                 <Text style={styles.content}>Contador: {counter}</Text>
 
-                <TouchableOpacity
-                    style={styles.button}
-                >
-                    <Text
-                        style={styles.buttonText}
+                <View style={styles.buttons}>
+                    <TouchableOpacity
+                        style={styles.button}
                         onPress={() => setCounter(counter + 1)}
-                    >Adicionar +1</Text>
-                </TouchableOpacity>
+                    >
+                        <Text style={styles.buttonText}>Adicionar +1</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={() => setCounter(0)}
+                    >
+                        <Text style={styles.buttonText}>Resetar</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
 
             <TouchableOpacity

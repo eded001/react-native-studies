@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 
 import styles from '../assets/styles/styles';
 
-export default function HomeScreen({ navigation }) {
+export default function Home({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Exemplos</Text>
@@ -43,6 +43,27 @@ export default function HomeScreen({ navigation }) {
                     onPress={() => navigation.navigate('ScrollView')}
                 >
                     <Text style={styles.buttonText}>ScrollView</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('SafeAreaPreview')}
+                >
+                    <Text style={styles.buttonText}>SafeAreaPreview</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('FlatList')}
+                >
+                    <Text style={styles.buttonText}>Lista</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('Modal')}
+                >
+                    <Text style={styles.buttonText}>Modal</Text>
                 </TouchableOpacity>
             </View>
         </View>

@@ -3,6 +3,9 @@
     "name": "react-native-studies",
     "slug": "react-native-studies",
     "version": "1.0.0",
-    "newArchEnabled": true
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-sqlite"
+    ]
   }
 }

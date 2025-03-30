@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
 import styles from '../assets/styles/styles';
 
-export default function InputOutputScreen({ navigation }) {
+export default function InputOutput({ navigation }) {
     const [text, setText] = useState("");
 
     return (
