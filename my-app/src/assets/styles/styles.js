@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export default StyleSheet.create({
+export default  StyleSheet.create({
     container: {
         flex: 1,
         gap: 50,
@@ -58,14 +58,14 @@ export default StyleSheet.create({
     buttonInput: {
         width: 135,
         height: 40,
-        borderColor: "gray",
+        borderColor: "#ddd",
         borderRadius: 5,
         borderWidth: 1,
         paddingHorizontal: 10
     },
     list: {
         width: 300,
-        maxHeight: 166,
+        maxHeight: 116,
         backgroundColor: "#999",
         borderRadius: 10
     },

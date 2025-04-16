@@ -65,6 +65,13 @@ export default function Home({ navigation }) {
                 >
                     <Text style={styles.buttonText}>Modal</Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('SQLiteDB')}
+                >
+                    <Text style={styles.buttonText}>SQLiteDB</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );

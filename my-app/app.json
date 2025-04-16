@@ -5,7 +5,29 @@
     "version": "1.0.0",
     "newArchEnabled": true,
     "plugins": [
-      "expo-sqlite"
-    ]
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": true,
+          "useSQLCipher": true,
+          "android": {
+            "enableFTS": false,
+            "useSQLCipher": false
+          },
+          "ios": {
+            "customBuildFlags": ["-DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_SNAPSHOT=1"]
+          }
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.anonymous.reactnativestudies"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ed892355-05b6-44db-bc01-24c296261ffc"
+      }
+    },
+    "owner": "eded001"
   }
 }

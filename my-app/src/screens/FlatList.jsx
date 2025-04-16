@@ -15,7 +15,7 @@ export default function FlatListExample({ navigation }) {
                         </View>
                     )}
                     keyExtractor={(item) => item.id}
-                    style={styles.list}
+                    style={{... styles.list, height: 10}}
                 />
             </View>
 

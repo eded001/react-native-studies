@@ -14,22 +14,21 @@ import ExampleWithSafeAreaScreen from './src/screens/ExampleWithSafeArea';
 import ExampleWithoutSafeAreaScreen from './src/screens/ExampleWithoutSafeArea';
 import FlatListScreen from './src/screens/FlatList';
 import Modal from './src/screens/Modal';
+import SQLiteDB from './src/screens/SQLiteDB'
 
 const Stack = createStackNavigator();
-
 export default function App() {
   return (
     <NavigationContainer>
       {/* O Stack.Navigator define a pilha de telas */}
 
-      <Stack.Navigator
-        initialRouteName="Home"
-        screenOptions={{ headerShown: false }}
-      >
+      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
         {/* initialRouteName -> Define a rota inicial baseada no componente que contém esse pseudo-ID */}
         {/* screenOptions -> Define configurações de renderização de tela como os headers (cabeçalhos) */}
 
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen} />
         {/* Stack.Screen -> define e "exibe" (deixa "acessível") as rotas (telas) */}
         {/* name -> nome das rotas */}
         {/* component -> component de renderização das rotas */}
@@ -73,6 +72,10 @@ export default function App() {
         <Stack.Screen
           name="Modal"
           component={Modal} />
+
+        <Stack.Screen
+          name="SQLiteDB"
+          component={SQLiteDB} />
       </Stack.Navigator>
     </NavigationContainer>
   );

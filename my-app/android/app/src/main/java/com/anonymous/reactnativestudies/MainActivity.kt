@@ -1,4 +1,4 @@
-package com.reactnativestudies
+package com.anonymous.reactnativestudies
 
 import android.os.Build
 import android.os.Bundle
